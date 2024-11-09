@@ -1,0 +1,18 @@
+-----------------------------------------------------------------------------------------------------
+Español
+-----------------------------------------------------------------------------------------------------
+Requisitos
+Para ejecutar este proyecto, necesitas tener instalado lo siguiente:
+
+Node.js: Asegúrate de tener Node.js instalado en tu máquina. Puedes descargarlo desde 
+https://nodejs.org/en
+Una vez que tengas Node.js instalado, puedes proceder con la configuración y ejecución de la aplicación.
+-----------------------------------------------------------------------------------------------------
+English
+-----------------------------------------------------------------------------------------------------
+Requirements
+To run this project, you need to have the following installed:
+
+Node.js: Ensure you have Node.js installed on your machine. You can download it from 
+https://nodejs.org/en
+Once Node.js is installed, you can proceed with the setup and run the application.

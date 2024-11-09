@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather API</title>
+    <link rel="icon" href="images/weather.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+    <div id="header">
+        <h1>Weather conditions</h1>
+        <form id="cityForm">
+            <label for="city">Enter the city:</label>
+            <input type="text" id="city" name="city" required>
+            <button type="submit">Search</button>
+
+            <div id="sunInfo">
+            </div>
+        </form>
+        <div id="result"></div>
+    </div>
+
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="index.js"></script>
+</body>
+</html>
