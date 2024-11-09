@@ -8,9 +8,9 @@ const requestOptions  = {
     redirect: "follow"
 };
 
-async function requestWeather(city) {
+async function requestWeather(city, datetime) {
     try{
-        const response = await fetch(`${url}${city}?key=${process.env.API_KEY_SECRET}`, requestOptions);
+        const response = await fetch(`${url}${city}/${datetime}?key=${process.env.API_KEY_SECRET}`, requestOptions);
         const result = await response.json();
         return result;
 

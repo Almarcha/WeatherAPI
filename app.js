@@ -18,8 +18,8 @@ app.get('/',(request,response) => {
 });
 
 app.get('/api/weather', async (req,res) => {
-    const { city } = req.query;
-    const data = await requestWeather(city);
+    const { city, datetime } = req.query;
+    const data = await requestWeather(city, datetime);
     res.json({ data });
 });
 

@@ -31,22 +31,31 @@ function setMapLocation(long, lat) {
 
 function getDate() {
     var currentdate = new Date(); 
-    var datetime = currentdate.getFullYear() + "-"
+    var date = currentdate.getFullYear() + "-"
+                    + (currentdate.getMonth() + 1)  + "-" 
+                    + currentdate.getDate()
+    return date;
+}
+
+function getDateTime() {
+    var currentdate = new Date(); 
+    var dateTime = currentdate.getFullYear() + "-"
                     + (currentdate.getMonth() + 1)  + "-" 
                     + currentdate.getDate() + " T "  
                     + currentdate.getHours() + ":"  
                     + currentdate.getMinutes() + ":" 
                     + currentdate.getSeconds();
-    return datetime;
+    return dateTime;
 }
 
 document.getElementById("cityForm").addEventListener("submit", async function (event) {
     
     event.preventDefault();
 
-    const datetime = getDate();
+    const date = getDate();
+    const dateTime = getDateTime();
     const city = document.getElementById("city").value;
-    const weatherData = await fetch(`http://localhost:4001/api/weather?city=${encodeURIComponent(city)}&datetime=${datetime}`);
+    const weatherData = await fetch(`http://localhost:4001/api/weather?city=${encodeURIComponent(city)}&datetime=${date}`);
 
     const { data } = await weatherData.json();
     
@@ -76,7 +85,7 @@ document.getElementById("cityForm").addEventListener("submit", async function (e
         document.getElementById("sunInfo").innerHTML = 
         `
         <div class="dateInfo">
-            <span style="color: white;">Day: ${datetime.replace('T',' ')}</span>
+            <span style="color: white;">Day: ${dateTime.replace('T',' ')}</span>
         </div>
         <div class="sunDetail">
             <span style="color: white;">Sunrise: ${sunrise}</span>
